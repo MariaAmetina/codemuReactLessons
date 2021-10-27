@@ -1,5 +1,8 @@
 .App {
   font-size: 24px;
-  color: rgb(59, 59, 197);
+  color: #3b3bc5;
   text-align: center;
+}
+.border {
+  border: solid 2px #3b3bc5;
 }
