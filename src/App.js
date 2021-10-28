@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React from "react";
+import Products from "./Products";
+import Employee from "./Employee";
 import "./App.css";
 
 // function App() {
@@ -1402,5 +1404,165 @@ import "./App.css";
 // //////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////
 // 42//////////////////////////////////////////////////////////////////////////////////////
-function App() {}
+// function id() {
+//   return new Date() * Math.floor(Math.random() * 10);
+// }
+// const initNotes = [
+//   {
+//     id: id(),
+//     fields: [
+//       { name: "prop1", value: "value11", isEdit: false },
+//       { name: "prop2", value: "value12", isEdit: false },
+//       { name: "prop3", value: "value13", isEdit: false },
+//     ],
+//   },
+//   {
+//     id: id(),
+//     fields: [
+//       { name: "prop1", value: "value21", isEdit: false },
+//       { name: "prop2", value: "value22", isEdit: false },
+//       { name: "prop3", value: "value23", isEdit: false },
+//     ],
+//   },
+//   {
+//     id: id(),
+//     fields: [
+//       { name: "prop1", value: "value31", isEdit: false },
+//       { name: "prop2", value: "value32", isEdit: false },
+//       { name: "prop3", value: "value33", isEdit: false },
+//     ],
+//   },
+// ];
+
+// function App() {
+//   const [notes, setNotes] = useState(initNotes);
+
+//   function changeHandler(id, name, func, event) {
+//     setNotes(
+//       notes.map((note) => {
+//         if (note.id === id) {
+//           const fields = note.fields.map((field) => {
+//             if (field.name === name) {
+//               return func(field, event);
+//             } else {
+//               return field;
+//             }
+//           });
+//           return { id, fields };
+//         } else {
+//           return note;
+//         }
+//       })
+//     );
+//   }
+
+//   function startEdit(field) {
+//     return { ...field, isEdit: true };
+//   }
+
+//   function changeCell(field, event) {
+//     return { ...field, value: event.target.value };
+//   }
+
+//   function endEdit(field) {
+//     return { ...field, isEdit: false };
+//   }
+
+//   const rows = notes.map((note) => {
+//     const cells = note.fields.map((field) => {
+//       let elem;
+
+//       if (!field.isEdit) {
+//         elem = (
+//           <span onClick={() => changeHandler(note.id, field.name, startEdit)}>
+//             {field.value}
+//           </span>
+//         );
+//       } else {
+//         elem = (
+//           <input
+//             value={field.value}
+//             onChange={(e) => changeHandler(note.id, field.name, changeCell, e)}
+//             onBlur={() => changeHandler(note.id, field.name, endEdit)}
+//           />
+//         );
+//       }
+
+//       return <td key={field.name}>{elem}</td>;
+//     });
+
+//     return <tr key={note.id}>{cells}</tr>;
+//   });
+
+//   return (
+//     <div>
+//       <table>
+//         <tbody>{rows}</tbody>
+//       </table>
+//     </div>
+//   );
+// }
+// export default App;
+
+//////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// 43//////////////////////////////////////////////////////////////////////////////////////
+
+// function App() {
+//   return (
+//     <div>
+//       <Product />
+//       <Product />
+//       <Product />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// 44//////////////////////////////////////////////////////////////////////////////////////
+// function App() {
+//   return (
+//     <div>
+//       <Employee name="mary" surname="amet" age="24" wage="$150 000" />
+//     </div>
+//   );
+// }
+// export default App;
+
+//////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// 45//////////////////////////////////////////////////////////////////////////////////////
+// const users = [
+//   { id: 122, name: "m", surname: "d", age: 2, wage: 150 },
+//   { id: 123, name: "2m", surname: "2d", age: 22, wage: 2150 },
+// ];
+// function App() {
+//   const res = users.map((user) => {
+//     return (
+//       <Employee
+//         key={user.id}
+//         name={user.name}
+//         surname={user.surname}
+//         age={user.age}
+//         wage={user.wage}
+//       />
+//     );
+//   });
+//   return <div>{res}</div>;
+// }
+// export default App;
+
+//////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////
+// 46//////////////////////////////////////////////////////////////////////////////////////
+function App() {
+  return <Products />;
+}
 export default App;
